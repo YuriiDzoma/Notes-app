@@ -1,10 +1,10 @@
 import Note from "./Note/Note";
-import styles from './NotesList.modules.scss'
 
-const NotesList = ({notes}) => {
+
+const NotesList = ({notes, getNote}) => {
     return (
-        <div className={styles.notesList}>
-            {notes.map((note, index) => <Note key={index} note={note} />)}
+        <div style={{display: 'flex', flexWrap: 'wrap'}}>
+            {notes.map((note, index) => <Note getNote={getNote} key={index} note={note} />)}
         </div>
     )
 }

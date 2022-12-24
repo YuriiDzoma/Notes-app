@@ -1,12 +1,17 @@
 import styles from './Note.module.scss'
+import {Link} from "react-router-dom";
 
-const Note = ({note}) => {
+const Note = ({note, getNote}) => {
     return (
-        <div className={styles.note}>
-            <div>
-                <span>{note.name}</span>
+        <Link to={'/' + note.id}>
+            <div className={styles.note} onClick={() => {
+                getNote(note)
+            }}>
+                <div>
+                    <span>{note.name}</span>
+                </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

@@ -1,0 +1,58 @@
+
+.wrapper {
+  position: relative;
+}
+
+.toBack {
+  position: absolute;
+  top: 0;
+  left: 20px;
+
+  span {
+    padding: 4px;
+    color: #094b4d;
+    font-weight: 500;
+    font-size: 17px;
+  }
+}
+
+.noteContainer {
+  position: relative;
+  padding: 12px;
+  margin: 30px auto;
+  min-height: 320px;
+  max-height: 500px;
+  min-width: 300px;
+  max-width: 60%;
+  border: 1px solid wheat;
+  border-radius: 16px;
+  background-color: rgba(48, 51, 63, 0.49);
+}
+
+.noteName {
+  text-align: center;
+  margin-top: 10px;
+
+  span {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+}
+
+.noteContent {
+  margin-top: 28px;
+}
+
+.editor {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border: 1px solid wheat;
+  padding: 4px 5px;
+  border-radius: 8px;
+
+  span {
+    color: burlywood;
+  }
+}

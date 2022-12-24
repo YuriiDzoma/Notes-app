@@ -1,11 +1,12 @@
 
 .headerBox {
   align-items: center;
-  min-height: 40px;
+  min-height: 50px;
   padding: 4px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   background-color: rgba(48, 51, 63, 0.49);
+  position: relative;
 
   div {
     margin: 0 20px;
@@ -13,7 +14,24 @@
 }
 
 .link {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+
   a {
+
     color: white;
+  }
+}
+
+.title {
+  span {
+    color: rgba(220, 228, 236, 0.82);
+    text-shadow: 1px 1px 0 rgb(19, 28, 45);
+    letter-spacing: 1px;
+    font-size: 28px;
+    font-family: "Bodoni MT";
+    font-weight: 900;
   }
 }

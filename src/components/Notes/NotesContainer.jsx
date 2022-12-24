@@ -1,15 +1,14 @@
 import {useSelector} from "react-redux";
-import Note from "./NotesList/Note/Note";
 import NotesList from "./NotesList/NotesList";
 
 
-const NotesContainer = (props) => {
+const NotesContainer = ({getNote}) => {
 
     const notes = useSelector(state => state.notes.notes)
 
     return (
         <div>
-            <NotesList notes={notes} />
+            <NotesList getNote={getNote} notes={notes} />
         </div>
     )
 }
