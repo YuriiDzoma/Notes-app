@@ -5,15 +5,17 @@ import React from "react";
 
 const Note:React.FC<NoteProps> = ({note, getNote}) => {
     return (
-        <Link to={'/' + note.id}>
-            <div className={styles.note} onClick={() => {
-                getNote(note)
-            }}>
-                <div>
-                    <span>{note.name}</span>
+        <div>
+            <Link to={'/' + note.id}>
+                <div className={styles.note} onClick={() => {
+                    getNote(note)
+                }}>
+                    <div>
+                        <span>{note.name}</span>
+                    </div>
                 </div>
-            </div>
-        </Link>
+            </Link>
+        </div>
     )
 }
 

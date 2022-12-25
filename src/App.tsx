@@ -16,8 +16,11 @@ const App = () => {
     }
 
     return (
+
         <div className={styles.wrapper}>
+
             <Header/>
+
             <Routes>
                 <Route path='/' element={<NotesContainer getNote={getNote} />}/>
                 <Route path=':id' element={<NoteExpand note={note} />} />
