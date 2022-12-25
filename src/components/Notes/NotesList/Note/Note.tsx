@@ -1,7 +1,9 @@
 import styles from './Note.module.scss'
 import {Link} from "react-router-dom";
+import {NoteProps} from "./Note.types";
+import React from "react";
 
-const Note = ({note, getNote}) => {
+const Note:React.FC<NoteProps> = ({note, getNote}) => {
     return (
         <Link to={'/' + note.id}>
             <div className={styles.note} onClick={() => {

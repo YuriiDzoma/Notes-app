@@ -1,5 +1,8 @@
 import styles from './NoteExpand.module.scss'
 import {Link} from "react-router-dom";
+import {NoteExpandProps} from "./NoteExpand.types";
+import React from "react";
+import CommentsList from "./CommentsList/CommentsList";
 
 
 const NoteExpand = ({note}) => {
@@ -20,6 +23,9 @@ const NoteExpand = ({note}) => {
                     <span>edit</span>
                 </div>
             </div>
+
+            {/*<CommentsList comments={props.note.comments} />*/}
+
         </div>
     )
 }

@@ -6,11 +6,12 @@ import NotesContainer from "./components/Notes/NotesContainer";
 import {Route, Routes} from "react-router-dom";
 import Settings from "./components/Settings/Settings";
 import NoteExpand from "./components/NoteExpand/NoteExpand";
+import {Note} from "./redux/notes-reducer.types";
 
 const App = () => {
 
-    const [note, setNote] = useState()
-    const getNote = (value: any) => {
+    const [note, setNote] = useState<Note>()
+    const getNote = (value: Note) => {
         setNote(value)
     }
 

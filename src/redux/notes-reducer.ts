@@ -1,8 +1,9 @@
 
 import {createAction} from "@reduxjs/toolkit";
 import {createReducer} from "@reduxjs/toolkit";
+import {NoteReducer} from "./notes-reducer.types";
 
-const initialState = {
+const initialState: NoteReducer = {
     count: 0,
     notes: [
         {id: 1, name: 'list of buys', content: 'need buy milk', comments: [
@@ -28,11 +29,11 @@ const increment = createAction('INCREMENT')
 const decrement = createAction('DECREMENT')
 
 export default createReducer(initialState, {
-    [increment]: function (state)  {
-        state.count = state.count + 1
-    },
-    [decrement]: function (state)  {
-        state.count = state.count + 1
-    }
+    // [increment]: function (state)  {
+    //     state.count = state.count + 1
+    // },
+    // [decrement]: function (state)  {
+    //     state.count = state.count + 1
+    // }
 })
 
