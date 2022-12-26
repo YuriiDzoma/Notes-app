@@ -1,5 +1,6 @@
 import styles from './Header.module.scss'
 import {Link} from "react-router-dom";
+import { FiSettings } from "react-icons/fi";
 
 const Header = () => {
     return (
@@ -9,7 +10,7 @@ const Header = () => {
             </div>
             <div className={styles.link}>
                 <Link to={`/settings/`}>
-                    <span>Settings</span>
+                    <div style={{fontSize: '20px'}}><FiSettings /></div>
                 </Link>
             </div>
         </div>

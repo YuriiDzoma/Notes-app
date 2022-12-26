@@ -10,6 +10,7 @@ const NotesList: React.FC<NotesListProps> = ({notes, getNoteId}) => {
 
         <div style={{display: 'flex', flexWrap: 'wrap'}}>
             {notes.map((note, index) => <Note getNoteId={getNoteId} key={index} note={note} />)}
+
             <div className={styles.createNote}>
                 <CreateNote />
             </div>
