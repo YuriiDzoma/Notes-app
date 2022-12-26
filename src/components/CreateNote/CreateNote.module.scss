@@ -4,7 +4,6 @@
 }
 
 .createNoteBox {
-  position: relative;
   padding: 12px;
   margin: 30px auto;
   min-height: 320px;
@@ -14,4 +13,29 @@
   border: 1px solid wheat;
   border-radius: 16px;
   background-color: rgba(48, 51, 63, 0.49);
+
+  span {
+    margin: 8px;
+  }
+
+  input {
+    margin-left: 16px;
+    width: 80%;
+    padding: 6px;
+    border-radius: 8px;
+  }
+
+  &_name {
+    margin-top: 10px;
+  }
+
+  &_content {
+    margin: 30px;
+
+    textarea {
+      width: 100%;
+      height: 190px;
+      border-radius: 8px;
+    }
+  }
 }

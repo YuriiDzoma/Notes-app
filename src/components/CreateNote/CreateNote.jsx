@@ -1,4 +1,3 @@
-
 import styles from "./CreateNote.module.scss"
 import ComeToHome from "../Common/ComeToHome/ComeToHome";
 
@@ -9,7 +8,16 @@ const CreateNote = () => {
             <ComeToHome />
 
             <div className={styles.createNoteBox}>
-                note
+
+                <div className={styles.createNoteBox_name}>
+                    <span>Name </span>
+                    <input type={"text"} />
+                </div>
+
+                <div className={styles.createNoteBox_content}>
+                    <textarea />
+                </div>
+
             </div>
 
         </div>

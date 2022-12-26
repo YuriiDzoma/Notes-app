@@ -1,6 +1,6 @@
 import styles from "./ComeToHome.module.scss";
 import {Link} from "react-router-dom";
-import {BiArrowBack} from "react-icons/bi";
+import {IoReturnUpBackSharp} from "react-icons/io5";
 import React from "react";
 
 
@@ -10,7 +10,7 @@ const ComeToHome = () => {
         <div  className={styles.toBack}>
             <Link to={'/'}>
                 <div>
-                    <BiArrowBack size={'28px'} color={'white'} />
+                    <IoReturnUpBackSharp size={'28px'} color={'white'} />
                 </div>
             </Link>
         </div>
