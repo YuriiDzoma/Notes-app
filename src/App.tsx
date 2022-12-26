@@ -5,14 +5,13 @@ import Header from "./components/Header/Header";
 import NotesContainer from "./components/Notes/NotesContainer";
 import {Route, Routes} from "react-router-dom";
 import Settings from "./components/Settings/Settings";
-import NoteExpand from "./components/NoteExpand/NoteExpand";
-import {Note} from "./redux/notes-reducer.types";
+import NoteExpandContainer from "./components/NoteExpand/NoteExpandContainer";
 
 const App = () => {
 
-    const [note, setNote] = useState<Note>()
-    const getNote = (value: Note) => {
-        setNote(value)
+    const [noteId, setNoteId] = useState<number>()
+    const getNoteId = (value: number | undefined) => {
+        setNoteId(value)
     }
 
     return (
@@ -22,8 +21,8 @@ const App = () => {
             <Header/>
 
             <Routes>
-                <Route path='/' element={<NotesContainer getNote={getNote} />}/>
-                <Route path=':id' element={<NoteExpand note={note} />} />
+                <Route path='/' element={<NotesContainer getNoteId={getNoteId} />}/>
+                <Route path=':id' element={<NoteExpandContainer noteId={noteId} />} />
                 <Route path='/settings/*' element={<Settings />} />
             </Routes>
 

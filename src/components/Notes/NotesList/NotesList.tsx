@@ -5,11 +5,11 @@ import CreateNote from "./CreateNote/CreateNote";
 import styles from './NotesList.module.scss'
 
 
-const NotesList: React.FC<NotesListProps> = ({notes, getNote}) => {
+const NotesList: React.FC<NotesListProps> = ({notes, getNoteId}) => {
     return (
 
         <div style={{display: 'flex', flexWrap: 'wrap'}}>
-            {notes.map((note, index) => <Note getNote={getNote} key={index} note={note} />)}
+            {notes.map((note, index) => <Note getNoteId={getNoteId} key={index} note={note} />)}
             <div className={styles.createNote}>
                 <CreateNote />
             </div>

@@ -3,7 +3,7 @@ import {AppStateType} from "../../redux/redux-store";
 
 
 export type NotesContainerProps = {
-    getNote: (note: Note) => void
+    getNoteId: (noteId: number | undefined) => void
 }
 
 export type IRootState = {

@@ -3,12 +3,12 @@ import {Link} from "react-router-dom";
 import {NoteProps} from "./Note.types";
 import React from "react";
 
-const Note:React.FC<NoteProps> = ({note, getNote}) => {
+const Note:React.FC<NoteProps> = ({note, getNoteId}) => {
     return (
         <div>
             <Link to={'/' + note.id}>
                 <div className={styles.note} onClick={() => {
-                    getNote(note)
+                    getNoteId(note.id)
                 }}>
                     <div>
                         <span>{note.name}</span>
