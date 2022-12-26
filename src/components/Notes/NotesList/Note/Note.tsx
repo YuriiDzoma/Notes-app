@@ -6,7 +6,7 @@ import React from "react";
 const Note:React.FC<NoteProps> = ({note, getNoteId}) => {
     return (
         <div>
-            <Link to={'/' + note.id}>
+            <Link className={styles.link} to={'/' + note.id}>
                 <div className={styles.note} onClick={() => {
                     getNoteId(note.id)
                 }}>

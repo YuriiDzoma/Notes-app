@@ -1,19 +1,21 @@
 import Note from "./Note/Note";
 import {NotesListProps} from "./NotesList.types";
 import React from "react";
-import CreateNote from "./CreateNote/CreateNote";
+import CreateNewNote from "./CreateNewNote/CreateNewNote";
 import styles from './NotesList.module.scss'
 
 
 const NotesList: React.FC<NotesListProps> = ({notes, getNoteId}) => {
     return (
 
-        <div style={{display: 'flex', flexWrap: 'wrap'}}>
+        <div className={styles.notesList}>
+
             {notes.map((note, index) => <Note getNoteId={getNoteId} key={index} note={note} />)}
 
-            <div className={styles.createNote}>
-                <CreateNote />
+            <div className={styles.link}>
+                <CreateNewNote />
             </div>
+
         </div>
 
     )

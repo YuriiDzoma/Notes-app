@@ -1,6 +1,5 @@
 
 
 export type NoteExpandProps = {
-    noteId: any
-
+    noteId: number | undefined
 }

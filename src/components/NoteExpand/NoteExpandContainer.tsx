@@ -5,9 +5,9 @@ import React from "react";
 import CommentsList from "./CommentsList/CommentsList";
 import {useSelector} from "react-redux";
 import {IRootState} from "../Notes/NotesContainer.types";
-import NoteContent from "./CommentsList/NoteContent/NoteContent";
+import NoteContent from "./NoteContent/NoteContent";
 import {Note} from "../../redux/notes-reducer.types";
-import { BiArrowBack } from 'react-icons/bi';
+import ComeToHome from "../Common/ComeToHome/ComeToHome";
 
 
 const NoteExpandContainer:React.FC<NoteExpandProps> = ({noteId}) => {
@@ -17,15 +17,9 @@ const NoteExpandContainer:React.FC<NoteExpandProps> = ({noteId}) => {
 
         <div className={styles.wrapper}>
 
-            <div className={styles.toBack}>
-                <Link to={'/'}>
-                    <div>
-                        <BiArrowBack size={'28px'} color={'white'} />
-                    </div>
-                </Link>
-            </div>
+            <ComeToHome />
 
-            <NoteContent name={note.name} content={note.content} />
+            <NoteContent name={note.name} content={note.content} noteId={noteId} />
 
             <CommentsList comments={note.comments} />
 

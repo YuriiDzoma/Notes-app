@@ -1,0 +1,17 @@
+
+.createNoteContainer {
+  position: relative;
+}
+
+.createNoteBox {
+  position: relative;
+  padding: 12px;
+  margin: 30px auto;
+  min-height: 320px;
+  max-height: 500px;
+  min-width: 300px;
+  max-width: 60%;
+  border: 1px solid wheat;
+  border-radius: 16px;
+  background-color: rgba(48, 51, 63, 0.49);
+}

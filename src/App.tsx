@@ -6,6 +6,9 @@ import NotesContainer from "./components/Notes/NotesContainer";
 import {Route, Routes} from "react-router-dom";
 import Settings from "./components/Settings/Settings";
 import NoteExpandContainer from "./components/NoteExpand/NoteExpandContainer";
+import CreateNote from "./components/CreateNote/CreateNote";
+
+
 
 const App = () => {
 
@@ -21,9 +24,11 @@ const App = () => {
             <Header/>
 
             <Routes>
-                <Route path='/' element={<NotesContainer getNoteId={getNoteId} />}/>
+                <Route path='/' element={<NotesContainer getNoteId={getNoteId} />} />
                 <Route path=':id' element={<NoteExpandContainer noteId={noteId} />} />
-                <Route path='/settings/*' element={<Settings />} />
+                <Route path=':noteId/edit/' element={<CreateNote />} />
+                <Route path='/create/' element={<CreateNote  />} />
+                <Route path='/settings/' element={<Settings />} />
             </Routes>
 
         </div>
