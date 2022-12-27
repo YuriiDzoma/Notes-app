@@ -18,6 +18,7 @@ const NoteContent:React.FC<noteContentProps> = ({name, content, noteId}) => {
             <div className={styles.noteName}>
                 <span>{name}</span>
             </div>
+
             <div className={styles.noteContent}>
                 <span>{content}</span>
             </div>

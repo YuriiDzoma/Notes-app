@@ -1,6 +1,8 @@
 import styles from "./CreateNote.module.scss"
 import ComeToHome from "../Common/ComeToHome/ComeToHome";
 
+//// in work process
+
 const CreateNote = () => {
     return (
         <div className={styles.createNoteContainer}>

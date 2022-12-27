@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.module.scss';
 import styles from './App.module.scss'
 import Header from "./components/Header/Header";
-import NotesContainer from "./components/Notes/NotesContainer";
+import NotesContainer from "./components/NotesContainer/NotesContainer";
 import {Route, Routes} from "react-router-dom";
 import Settings from "./components/Settings/Settings";
 import NoteExpandContainer from "./components/NoteExpand/NoteExpandContainer";
