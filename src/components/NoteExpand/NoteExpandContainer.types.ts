@@ -1,5 +1,5 @@
-
+import {Note} from "../../redux/notes-reducer.types";
 
 export type NoteExpandProps = {
-    noteId: number | undefined
+    notes: Note[]
 }

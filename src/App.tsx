@@ -9,13 +9,7 @@ import NoteExpandContainer from "./components/NoteExpand/NoteExpandContainer";
 import CreateNote from "./components/CreateNote/CreateNote";
 
 
-
 const App = () => {
-
-    const [noteId, setNoteId] = useState<number>()
-    const getNoteId = (value: number | undefined) => {
-        setNoteId(value)
-    }
 
     return (
 
@@ -24,8 +18,8 @@ const App = () => {
             <Header/>
 
             <Routes>
-                <Route path='/' element={<NotesContainer getNoteId={getNoteId} />} />
-                <Route path=':id' element={<NoteExpandContainer noteId={noteId} />} />
+                <Route path='/' element={<NotesContainer />} />
+                <Route path=':id' element={<NoteExpandContainer />} />
                 <Route path=':noteId/edit/' element={<CreateNote />} />
                 <Route path='/create/' element={<CreateNote  />} />
                 <Route path='/settings/' element={<Settings />} />

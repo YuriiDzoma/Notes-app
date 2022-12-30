@@ -1,8 +1,11 @@
 import { combineReducers, configureStore} from "@reduxjs/toolkit";
-import notesReducer from "./notes-reducer";
+import {firestoreReducer} from "redux-firestore";
+import notesSlice from "./notes-slice";
+
 
 const rootReducers = combineReducers({
-    diary: notesReducer
+    notesPage: notesSlice,
+    firestore: firestoreReducer,
 })
 
 export const store = configureStore({

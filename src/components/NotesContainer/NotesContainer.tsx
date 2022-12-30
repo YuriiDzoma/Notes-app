@@ -1,17 +1,17 @@
 import {useSelector} from "react-redux";
-import NotesList from "./NotesBox/NotesBox";
 import React from "react";
 import {IRootState, NotesContainerProps} from "./NotesContainer.types";
+import NotesBox from "./NotesBox/NotesBox";
 
 
-const NotesContainer: React.FC<NotesContainerProps> = ({getNoteId}) => {
+const NotesContainer: React.FC<NotesContainerProps> = () => {
 
-    const notes = useSelector((state: IRootState) => state.diary.notes)
+    const notes = useSelector((state: IRootState) => state.notesPage.notes)
 
     return (
 
         <div>
-            <NotesList getNoteId={getNoteId} notes={notes} />
+            <NotesBox notes={notes} />
         </div>
 
     )

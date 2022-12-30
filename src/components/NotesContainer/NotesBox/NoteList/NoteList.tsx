@@ -3,10 +3,10 @@ import React from "react";
 import {NotesListProps} from "../NotesBox.types";
 
 
-const NoteList:React.FC<NotesListProps> = ({notes, getNoteId}) => (
+const NoteList:React.FC<NotesListProps> = ({notes}) => (
 
     <>
-        {notes.map((note, index) => <Note getNoteId={getNoteId} key={index} note={note}/>)}
+        {notes.map((note, index) => <Note key={index} note={note}/>)}
     </>
 
 )

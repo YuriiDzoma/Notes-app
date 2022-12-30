@@ -1,18 +1,20 @@
 import styles from './NoteExpandContainer.module.scss'
-import {Link} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {NoteExpandProps} from "./NoteExpandContainer.types";
 import React from "react";
 import CommentsList from "./CommentsList/CommentsList";
 import {useSelector} from "react-redux";
 import {IRootState} from "../NotesContainer/NotesContainer.types";
 import NoteContent from "./NoteContent/NoteContent";
-import {Note} from "../../redux/notes-reducer.types";
 import ComeToHome from "../Common/ComeToHome/ComeToHome";
 
 
-const NoteExpandContainer:React.FC<NoteExpandProps> = ({noteId}) => {
 
-    const note = useSelector((state: IRootState) => state.diary.notes.find((note: Note) => note.id === noteId))
+const NoteExpandContainer = () => {
+
+    const noteId = useParams().id
+
+    const note = useSelector((state) => state.notesPage.notes.find((note) => note.id === +noteId))
 
     return (
 

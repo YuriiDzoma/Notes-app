@@ -14,6 +14,5 @@ export type Note = {
 }
 
 export type NoteReducer = {
-    count: number
-    notes: Note[]
+
 }

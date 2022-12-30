@@ -6,12 +6,12 @@ import styles from './NotesBox.module.scss'
 import NoteList from "./NoteList/NoteList";
 
 
-const NotesBox: React.FC<NotesListProps> = ({notes, getNoteId}) => {
+const NotesBox: React.FC<NotesListProps> = ({notes}) => {
     return (
 
         <div className={styles.notesList}>
 
-            <NoteList notes={notes} getNoteId={getNoteId} />
+            <NoteList notes={notes}  />
 
             <div className={styles.link}>
                 <CreateNewNote />
