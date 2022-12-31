@@ -1,5 +1,18 @@
 import {createSlice} from "@reduxjs/toolkit";
 
+type Comment = {
+    id: number,
+    author: string,
+    content: string,
+    created_at: string
+}
+
+type newNote = {
+    id: number,
+    name: string,
+    content: string
+    comments: Comment[]
+}
 
 const notesSlice = createSlice({
     name: 'notesPage',
@@ -16,7 +29,13 @@ const notesSlice = createSlice({
     },
     reducers: {
         addNote(state, action) {
-            state.notes.push(action.payload)
+            const newNote: newNote = {
+                id: state.notes.length +1,
+                name: action.payload.name,
+                content: action.payload.content,
+                comments: []
+            }
+            state.notes.push(newNote)
         },
         deleteNote(state, action) {
             state.notes = state.notes.filter((item) => item.id !== action.payload)

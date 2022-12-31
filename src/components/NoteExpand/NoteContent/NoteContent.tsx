@@ -2,8 +2,7 @@ import styles from "./NoteContent.module.scss";
 import React from "react";
 import {noteContentProps} from "./NoteContent.types";
 import {Link} from "react-router-dom";
-import {IconButton} from "@mui/material";
-import DeleteIcon from '@mui/icons-material/Delete';
+
 
 const NoteContent:React.FC<noteContentProps> = ({name, content, noteId}) => {
 

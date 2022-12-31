@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.module.scss';
 import styles from './App.module.scss'
 import Header from "./components/Header/Header";
@@ -6,7 +6,7 @@ import NotesContainer from "./components/NotesContainer/NotesContainer";
 import {Route, Routes} from "react-router-dom";
 import Settings from "./components/Settings/Settings";
 import NoteExpandContainer from "./components/NoteExpand/NoteExpandContainer";
-import CreateNote from "./components/CreateNote/CreateNote";
+import CreateNoteContainer from "./components/CreateNoteContainer/CreateNoteContainer";
 
 
 const App = () => {
@@ -20,8 +20,8 @@ const App = () => {
             <Routes>
                 <Route path='/' element={<NotesContainer />} />
                 <Route path=':id' element={<NoteExpandContainer />} />
-                <Route path=':noteId/edit/' element={<CreateNote />} />
-                <Route path='/create/' element={<CreateNote  />} />
+                <Route path=':noteId/edit/' element={<CreateNoteContainer isEditor={true} />} />
+                <Route path='/create/' element={<CreateNoteContainer isEditor={false} />} />
                 <Route path='/settings/' element={<Settings />} />
             </Routes>
 
